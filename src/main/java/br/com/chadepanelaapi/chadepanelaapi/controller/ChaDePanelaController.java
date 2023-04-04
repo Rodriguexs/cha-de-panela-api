@@ -5,10 +5,7 @@ import br.com.chadepanelaapi.chadepanelaapi.entity.Presente;
 import br.com.chadepanelaapi.chadepanelaapi.repository.ConvidadoRepository;
 import br.com.chadepanelaapi.chadepanelaapi.repository.PresenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,11 +19,13 @@ public class ChaDePanelaController {
     private ConvidadoRepository convidadoRepo;
 
 
+    @CrossOrigin
     @GetMapping(value = "/presentes")
     public List<Presente> listarPresentes(){
         return presenteRepo.findAll();
     }
 
+    @CrossOrigin
     @PostMapping(value = "/convidado/novo")
     public void cadastrarNovoConvidado(@RequestBody Convidado convidado){
         this.convidadoRepo.save(convidado);

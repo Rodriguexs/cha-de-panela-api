@@ -11,7 +11,7 @@
 	<groupId>br.com.cha-de-panela-api</groupId>
 	<artifactId>cha-de-panela-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>cha-de-panela-api</name>
 	<description>Api para o chá de panela</description>
 <properties>
